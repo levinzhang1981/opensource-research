@@ -12,12 +12,7 @@
   <version>1.0.0</version>
   
   
-  <repositories>
-		<repository>
-			<id>ourTeam</id>
-			<url>http://lg-nexus.linegame.jp/content/repositories/ourTeam</url>
-		</repository>
-	</repositories>
+
   
   <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
