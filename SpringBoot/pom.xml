@@ -36,7 +36,7 @@
         </dependency>    
         <!-- To See Actually Exec,No Need to Add  End -->
         
-        
+        <!-- 可以查看各种指标 -->
          <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
