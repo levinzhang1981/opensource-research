@@ -8,4 +8,8 @@ import com.levinzhang.springweb.model.User;
 @Mapper
 public interface UserRepository {
 	List<User> getAllUser();
+
+	void addUser(User user);
+	
+	void updateUser(User user);
 }

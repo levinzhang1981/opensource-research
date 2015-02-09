@@ -21,12 +21,11 @@ public class MyFirstController {
 	@ResponseBody
 	@RequestMapping(value = {"/showUser",""}, method = RequestMethod.GET)
 	public List<User> showUser(){
-//		User user = new User();
-//		user.setId("sss");
-//		List<User> result = Lists.newArrayList();
-//		result.add(user);
-//		return result;
-		
+		User user = new User();
+		user.setId("sss");
+		user.setName("zhangwb");
+		user.setEmail("levinzhang1981@126.com");
+		userService.addUser(user);
 		return userService.getAllUser();
 	}
 	
