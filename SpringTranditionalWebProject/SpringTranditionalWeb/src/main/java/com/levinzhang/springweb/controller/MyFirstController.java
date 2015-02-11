@@ -1,6 +1,7 @@
 package com.levinzhang.springweb.controller;
 
 import java.util.List;
+import java.util.concurrent.Callable;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,11 +22,11 @@ public class MyFirstController {
 	@ResponseBody
 	@RequestMapping(value = {"/showUser",""}, method = RequestMethod.GET)
 	public List<User> showUser(){
-		User user = new User();
-		user.setId("sss");
-		user.setName("zhangwb");
-		user.setEmail("levinzhang1981@126.com");
-		userService.addUser(user);
+//		User user = new User();
+//		user.setId("sss");
+//		user.setName("zhangwb");
+//		user.setEmail("levinzhang1981@126.com");
+//		userService.addUser(user);
 		return userService.getAllUser();
 	}
 	
@@ -40,4 +41,18 @@ public class MyFirstController {
 		
 		return "index";
 	}
+	
+	
+	
+	@RequestMapping("/async")
+    public @ResponseBody Callable<String> callable() {
+        return new Callable<String>() {
+            public String call() throws Exception {
+                Thread.sleep(2000);
+                return "Callable result";
+            }
+        };
+    }
+	
+	
 }
